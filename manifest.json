@@ -2,18 +2,13 @@
 	"manifest_version": 2,
   	"name": "Quote tab",
     "description": "Every tab with a nature background and a quote",
-    "version": "1.0",
+    "version": "1.0.1",
     "permissions" : [
         "tabs",
         "chrome://favicon/"],
     "chrome_url_overrides" : {
         "newtab": "newpage.html"
     },
-    "content_scripts": [
-      {
-       "js": ["jquery.min.js"]
-      }
-   ],   
     	"background": {
 		"scripts":["background.js"],
 		"persistent": false
