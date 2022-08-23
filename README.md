@@ -23,6 +23,7 @@ In its current state, this extension does exactly what it needs to do. However, 
 
 I have tried to simplify the code so anyone can read it and start contributing at any skill level. Don't be shy :) contribute!
 
+- [] Add a favicon.
 - [] Add custom nature video background
 - [] Allowing users to choose specific backgrounds
 - [] Allowing users to choose custom resolutions
