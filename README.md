@@ -4,7 +4,7 @@ Every tab with a nature background and a quote
 Created by [Simon](https://github.com/StopmotionSimonYT)
 
 ## Screenshots
-![](https://user-images.githubusercontent.com/65854503/186133159-22b01fa7-fcab-41a5-a3ba-ef0f1eeb745e.png | width=200)
+![](https://user-images.githubusercontent.com/65854503/186133159-22b01fa7-fcab-41a5-a3ba-ef0f1eeb745e.png)
 
 ## Requirements
 
