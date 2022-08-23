@@ -33,3 +33,4 @@ I have tried to simplify the code so anyone can read it and start contributing a
 - [ ] Allowing users to choose specific backgrounds
 - [ ] Allowing users to choose custom resolutions
 - [ ] Allowing users to choose between any background category.
+- [ ] Allowing users to change the language of the quote or translate it
