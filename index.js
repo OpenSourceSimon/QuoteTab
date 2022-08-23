@@ -1,4 +1,3 @@
-const store = chrome.storage.sync;
 (function () {
   let dom = document.getElementById("bgimg");
   dom.style.background = "linear-gradient(220.55deg, #5D85A6 0%, #0E2C5E 100%)";
