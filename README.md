@@ -1,5 +1,5 @@
 # "Quote tab"
-Every tab with a nature background and a quote
+Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source.
 
 Created by [Simon](https://github.com/StopmotionSimonYT)
 
