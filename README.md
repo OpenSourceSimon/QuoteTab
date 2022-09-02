@@ -26,7 +26,7 @@ In its current state, this extension does exactly what it needs to do. However, 
 
 I have tried to simplify the code so anyone can read it and start contributing at any skill level. Don't be shy :) contribute!
 
-- [ ] Update to Manifest V3
+- [x] Update to Manifest V3
 - [x] Create working demo site
 - [ ] Add a favicon.
 - [ ] Add custom nature video background
