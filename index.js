@@ -80,11 +80,11 @@ function insertinDom() {
   ).innerHTML = `${tab.dateDetails.day}, ${tab.dateDetails.month} ${tab.dateDetails.date}`;
 }
 function getQuote() {
-    $.getJSON('https://api.quotable.io/random', function(data){
+    $.getJSON('https://simonrijntjes.nl/quote.php', function(data){
       let template =
       '<span style="font-size: 2vh;padding: 8px;;text-shadow: 2px 2px 4px #000000;"><strong style="font-style: italic;font-size: 2vh;text-shadow: 0 0 2px gray;">"QUOTE"</strong><a target="_blank" rel="noopenner" style="color:white;text-decoration: none;">- AUTHOR</a><span></span></span>';
-      var quote = `${data.content}`;
-      var author = `${data.author}`
+      var quote = `${data.quote}`;
+      var author = `${data.author}`;
       template = template.replace("QUOTE", quote);
       template = template.replace("AUTHOR", author);
       $("#quote").html(template);
