@@ -1,5 +1,5 @@
 # "Quote tab"
-Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source.
+Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source. The quote source is in the quote branch.
 
 Created by [Simon](https://github.com/StopmotionSimonYT)
 
@@ -27,10 +27,11 @@ In its current state, this extension does exactly what it needs to do. However, 
 I have tried to simplify the code so anyone can read it and start contributing at any skill level. Don't be shy :) contribute!
 
 - [ ] Update to Manifest V3
-- [ ] Create working demo site
+- [x] Create working demo site
 - [ ] Add a favicon.
 - [ ] Add custom nature video background
 - [ ] Allowing users to choose specific backgrounds
 - [ ] Allowing users to choose custom resolutions
 - [ ] Allowing users to choose between any background category.
 - [ ] Allowing users to change the language of the quote or translate it
+- [ ] Add more quotes in quote branch
