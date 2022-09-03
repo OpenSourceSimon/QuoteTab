@@ -35,3 +35,4 @@ I have tried to simplify the code so anyone can read it and start contributing a
 - [ ] Allowing users to choose between any background category.
 - [ ] Allowing users to change the language of the quote or translate it
 - [ ] Add more quotes in quote branch
+- [ ] Add translation in quote branch
