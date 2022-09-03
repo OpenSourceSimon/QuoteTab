@@ -1,7 +1,7 @@
 # "Quote tab"
 Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source. The quote source is in the quote branch.
 
-Created by [Simon](https://github.com/StopmotionSimonYT)
+Created by [Simon](https://github.com/OpenSourceSimon)
 
 ## Screenshots
 ![](https://user-images.githubusercontent.com/65854503/186133159-22b01fa7-fcab-41a5-a3ba-ef0f1eeb745e.png)
