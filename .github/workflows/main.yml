@@ -24,11 +24,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.2.0
       - name: Setup Python
-        uses: actions/setup-python@v4.2.0
         with:
           python-version: 3.10
       - run: pip3 install googletrans
       
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.2.0
       - name: Run Python
+        with:
+          python-version: 3.10
       - run: python main.py
