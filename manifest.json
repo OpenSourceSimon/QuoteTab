@@ -1,12 +1,23 @@
 {
-    "manifest_version": 3,
-    "name": "Quote tab",
-    "description": "Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source.",
-    "version": "1.1",
-    "permissions" : ["tabs"],
-    "chrome_url_overrides" : {"newtab": "index.html"},
-    "host_permissions": ["https://simonrijntjes.nl/*"],
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "Quote tab",
+  "description": "Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source.",
+  "version": "1.1",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "host_permissions": [
+    "https://simonrijntjes.nl/*"
+  ],
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
   }
- }
+}
