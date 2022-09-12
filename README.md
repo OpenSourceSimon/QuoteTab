@@ -21,8 +21,8 @@ The quote and background also change on reload on the demo!
 3. Enable Developer Mode and click Load unpacked extension button and upload the folder
 4. Enjoy!
 
-## Quote API
-This extension uses a quote API that I created. You can find the source code [here](https://github.com/OpenSourceSimon/QuoteAPI). You're welcome to add quotes, please read the README for more information! If you want to self host the API, you can do that too. Just follow the instructions in the README. 
+## Quote
+This extension uses [Quotable](https://github.com/lukePeavey/quotable) to get random quotes. It is a free API that is open source!  
 
 ## Contributing & Ways to improve 📈
 
