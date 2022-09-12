@@ -19,23 +19,6 @@
             });
     }
 
-    //function fetchVideo() {
-    //fetch("https://randomvideo.vercel.app/randomvideo")
-    //.then((resp) => resp.json())
-    //.then((res) => {
-    //insertVideo(res?.src?.video_files[0].link);
-    //})
-    //.catch(() => {
-    //error();
-    //});
-    //}
-    //function insertVideo(src) {
-    //var video = document.getElementById("myVideo");
-    //var source = document.createElement("source");
-    //source.setAttribute("src", src);
-    //video.appendChild(source);
-    //video.play();
-    //}
     function error() {
         let dom = document.getElementById("bgimg");
         dom.style.backgroundColor = "grey";
@@ -47,12 +30,11 @@
     }
 
     function startTime() {
-        var today = new Date(),
+        const today = new Date(),
             h = checkTime(today.getHours()),
             m = checkTime(today.getMinutes()),
-            s = checkTime(today.getSeconds());
-        let time = h + ":" + m;
-        document.getElementById("time").innerHTML = time;
+            s = checkTime(today.getSeconds()); // Not used, but can be used to show seconds. TODO : Add seconds to the clock as an setting.
+        document.getElementById("time").innerHTML = h + ":" + m;
         setTimeout(function () {
             startTime();
         }, 500);
@@ -80,20 +62,20 @@ class TabAction extends Init {
 let tab = new TabAction();
 getQuote();
 tab.setDateDetails();
-insertinDom();
+insertDom();
 
-function insertinDom() {
+function insertDom() {
     document.getElementById(
         "date"
     ).innerHTML = `${tab.dateDetails.day}, ${tab.dateDetails.month} ${tab.dateDetails.date}`;
 }
 
 function getQuote() {
-    $.getJSON('https://simonrijntjes.nl/quote.php', function (data) {
+    $.getJSON('https://api.quotable.io/random', function (data) {
         let template =
             '<span style="font-size: 2vh;padding: 8px;;text-shadow: 2px 2px 4px #000000;"><strong style="font-style: italic;font-size: 2vh;text-shadow: 0 0 2px gray;">"QUOTE"</strong><a target="_blank" rel="noopenner" style="color:white;text-decoration: none;">- AUTHOR</a><span></span></span>';
-        var quote = `${data.quote}`;
-        var author = `${data.author}`;
+        const quote = `${data.content}`;
+        const author = `${data.author}`;
         template = template.replace("QUOTE", quote);
         template = template.replace("AUTHOR", author);
         $("#quote").html(template);
@@ -101,12 +83,12 @@ function getQuote() {
 }
 
 function getdateDetails() {
-    var today = new Date();
-    var day = today.getDay();
-    var dd = today.getDate();
-    var mm = today.getMonth();
-    var yyyy = today.getFullYear();
-    var dL = [
+    const today = new Date();
+    const day = today.getDay();
+    const dd = today.getDate();
+    const mm = today.getMonth();
+    const yyyy = today.getFullYear();
+    const dL = [
         "Sunday",
         "Monday",
         "Tuesday",
@@ -115,7 +97,7 @@ function getdateDetails() {
         "Friday",
         "Saturday",
     ];
-    var mL = [
+    const mL = [
         "January",
         "February",
         "March",
@@ -146,6 +128,5 @@ function timeTo12HrFormat(time) {
     if (time_part_array[0] > 12) {
         time_part_array[0] = time_part_array[0] - 12;
     }
-    let formatted_time = `${time_part_array[0]}:${time_part_array[1]} <span class="am_pm">${ampm}<span>`;
-    return formatted_time;
+    return `${time_part_array[0]}:${time_part_array[1]} <span class="am_pm">${ampm}<span>`;
 }
