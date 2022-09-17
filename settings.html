@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuoteTab settings</title>
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #F0F1F2;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        h1 {
+            color: #FFF;
+            font-size: 64px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 50px auto;
+        }
+
+        .sidebar {
+            display: inline-block;
+            width: 25%;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .sidebar i {
+            margin-right: 15px;
+        }
+
+        .sidebar__header {
+            vertical-align: top;
+            background: #FAFBFB;
+            padding: 20px;
+            border-bottom: 1px solid #F0F1F2;
+        }
+
+        .sidebar__header img.sidebar__avatar {
+            float: left;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .sidebar__header p {
+            line-height: 2em;
+            margin: 0;
+        }
+
+        .sidebar__menu-item {
+            background: #FFF;
+            padding: 20px;
+            color: #999;
+            border-bottom: 1px solid #F0F1F2;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar__menu-item--active {
+            color: #000;
+            border-left: 3px solid #348AA7;
+        }
+
+        .sidebar__menu-item:hover {
+            background: #f7f7f7;
+            cursor: pointer;
+        }
+
+        .sidebar__label {
+            float: right;
+            font-size: 80%;
+            line-height: 1.6em;
+            color: #FDE756;
+        }
+
+        .sidebar__badge {
+            text-align: center;
+            float: right;
+            font-size: 70%;
+            line-height: 1.8em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: #FFF;
+            background: #8ED081;
+        }
+
+        .main {
+            width: 70%;
+            vertical-align: top;
+            display: inline-block;
+            background: #FFF;
+            margin-left: 3%;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .main__header {
+            padding: 20px;
+            border-bottom: 1px solid #F0F1F2;
+        }
+
+        .main__content {
+            padding: 20px;
+        }
+
+        .main__avatar {
+            background: url("https://unsplash.it/150/?image=209");
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+            display: block;
+            vertical-align: middle;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .main__avatar:hover .main__avatar--overlay {
+            opacity: 1;
+            border-radius: 50%;
+        }
+
+        .main__avatar--overlay {
+            opacity: 0;
+            background: rgba(52, 138, 167, 0.6);
+            color: #FFF;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .main__settings-form {
+            max-width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .main__input-label {
+            font-size: 80%;
+            color: #C4C1C9;
+            display: block;
+            margin: 5px 5px 5px 5px;
+        }
+
+        .main__input {
+            display: inline-block;
+            width: 100%;
+            border: 1px solid #F1F3F5;
+            margin-bottom: 20px;
+            outline: none;
+            padding: 15px;
+            border-radius: 3px;
+            color: #000;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .main__input:focus {
+            border: 1px solid #348AA7;
+            transition: all 0.3s ease;
+        }
+
+        .btn {
+            margin-bottom: 20px;
+            font-family: "Montserrat", sans-serif;
+            border: none;
+            outline: none;
+            padding: 15px 25px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .main__save-button {
+            color: #FFF;
+            background-color: #8ED081;
+        }
+
+        .main__save-button:hover {
+            background-color: #6dc25c;
+            cursor: pointer;
+        }
+
+        .main__cancel-button {
+            color: #FFF;
+            background: #CCC;
+        }
+
+        .main__cancel-button:hover {
+            background-color: #b3b3b3;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #464C4F;
+            padding: 40px;
+            color: #CCC;
+            font-size: 90%;
+        }
+
+        @media (max-width: 764px) {
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .sidebar__menu-item {
+                padding: 15px;
+            }
+
+            .main {
+                width: 100%;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            footer {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<script src="jquery.min.js"></script>
+<script src="background.js"></script>
+<script src="settings.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<header id="header">
+    <h1>Settings</h1>
+</header>
+<div class='container'>
+    <div class='sidebar'>
+        <div class='sidebar__menu-item sidebar__menu-item--active'>
+            <i class="fa fa-quote-left"></i>
+            Quote
+        </div>
+        <div class='sidebar__menu-item'>
+            <i class="fa fa-picture-o"></i>
+            Image Source
+        </div>
+        <div class='sidebar__menu-item e'>
+            <i class='fa fa-cog'></i>
+            Settings
+        </div>
+    </div>
+    <div class='main'>
+        <div class='main__header'>
+            <h2>Quote</h2>
+        </div>
+        <div class='main__content'>
+            <div class='main__settings-form'>
+                <form action='#' method='post'>
+                    <label class='main__input-label'>Language:</label>
+                    <select class='main__input' name='language'>
+                        <option value='en'>English</option>
+                        <option value='fr'>French</option>
+                        <option value='de'>German</option>
+                        <option value='it'>Italian</option>
+                        <option value='es'>Spanish</option>
+                    </select>
+                    <label class='main__input-label'>Source:</label>
+                    <input class='main__input' name="quoteSource" placeholder='https://simonrijntjes.nl/quote.php' type='text'>
+                </form>
+                <button class='btn main__save-button'>Save</button>
+                <button class='btn main__cancel-button'>Cancel</button>
+            </div>
+        </div>
+        <div style="height:50px; background: #F0F1F2"></div>
+        <div class='main__header'>
+            <h2>Image Source</h2>
+        </div>
+        <div class='main__content'>
+            <div class='main__settings-form'>
+                <form action='#' method='post'>
+                    <label class='main__input-label'>Source:</label>
+                    <input class='main__input' placeholder='https://source.unsplash.com/random/' type='text'>
+                    <label class='main__input-label'>Resolution:</label>
+                    <input class='main__input' placeholder='3840x2160' type='text'>
+                    <label class='main__input-label'>Category:</label>
+                    <input class='main__input' placeholder='Nature' type='text'>
+                </form>
+                <button class='btn main__save-button' onclick="saveSettings()">Save</button>
+                <button class='btn main__cancel-button' onclick="restoreSettings()">Cancel</button>
+            </div>
+        </div>
+        <div style="height:50px; background: #F0F1F2"></div>
+        <div class='main__header'>
+            <h2>Settings</h2>
+        </div>
+        <div class='main__content'>
+            <div class='main__settings-form'>
+                <form action='#' method='post'>
+                    <label class='main__input-label'>Time format</label>
+                    <label>
+                        <select class='main__input' name='timeformat'>
+                            <option value='12'>12 hour</option>
+                            <option value='24'>24 hour</option>
+                        </select>
+                    </label>
+                </form>
+                <button class='btn main__save-button'>Save</button>
+                <button class='btn main__cancel-button'>Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Created by <a href='https://github.com/OpenSourceSimon'>OpenSourceSimon.</a> All rights reserved.</p>
+</footer>
+</body>
+</html>
