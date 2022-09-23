@@ -66,7 +66,7 @@ function getQuote() {
         dataType: "json",
         success: function (data) {
             let template =
-                '<span style="font-size: 2vh;padding: 8px;;text-shadow: 2px 2px 4px #000000;"><strong style="font-style: italic;font-size: 2vh;text-shadow: 0 0 2px gray;">"QUOTE"</strong><a target="_blank" rel="noopenner" style="color:white;text-decoration: none;">- AUTHOR</a><span></span></span>';
+                '<span style="font-size: 3vh;padding: 8px;;text-shadow: 2px 2px 4px #000000; font-weight: normal"><strong style="font-style: italic;font-size: 3vh; font-weight: normal ;text-shadow: 0 0 2px gray;">"QUOTE"</strong><a target="_blank" rel="noopenner" style="color:white;text-decoration: none;">- AUTHOR</a><span></span></span>';
             const quote = `${data.content}`;
             const author = `${data.author}`;
             template = template.replace("QUOTE", quote);
