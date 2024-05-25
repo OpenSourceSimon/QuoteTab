@@ -6,10 +6,6 @@ Created by [Simon](https://github.com/OpenSourceSimon)
 ## Screenshots
 ![](https://user-images.githubusercontent.com/65854503/186133159-22b01fa7-fcab-41a5-a3ba-ef0f1eeb745e.png)
 
-## Live demo
-
-Please visit this website to see the live demo: [https://simonrijntjes.nl/quotetab](https://simonrijntjes.nl/quotetab.html).
-The quote and background also change on reload on the demo!
 ## Requirements
 
 - For so far only tested on Chrome and Edge. Firefox manifest is not yet added. If you want to use it on Firefox, please use an extension that allows you to change the new tab page to a custom URL. (I recommend [this one](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/))
