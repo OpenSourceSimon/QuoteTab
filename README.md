@@ -1,4 +1,4 @@
-# "Quote tab"
+# QuoteTab
 Changes your new tab page to a minimalistic page. Just a simple clock, random nature background and random quote. And the best part, it is completely open source.
 
 Created by [Simon](https://github.com/OpenSourceSimon)
@@ -6,6 +6,10 @@ Created by [Simon](https://github.com/OpenSourceSimon)
 ## Screenshots
 ![](https://user-images.githubusercontent.com/65854503/186133159-22b01fa7-fcab-41a5-a3ba-ef0f1eeb745e.png)
 
+## Live demo
+
+Please visit this website to see the live demo: [https://opensourcesimon.github.io/QuoteTab/](https://opensourcesimon.github.io/QuoteTab/).
+The demo also includes a change of the quote and background on every refresh!
 ## Requirements
 
 - For so far only tested on Chrome and Edge. Firefox manifest is not yet added. If you want to use it on Firefox, please use an extension that allows you to change the new tab page to a custom URL. (I recommend [this one](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/))
@@ -32,6 +36,5 @@ I have tried to simplify the code so anyone can read it and start contributing a
 - [ ] Add custom nature video background
 - [ ] Allowing users to choose specific backgrounds
 - [ ] Allowing users to choose custom resolutions
-- [ ] Allowing users to choose between any background category.
+- [ ] Allowing users to choose between any background category
 - [ ] Allowing users to change the language of the quote
-- [ ] Add more quotes in quote API repository
